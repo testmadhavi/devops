@@ -1,0 +1,34 @@
+I would like to take an opportunity to quickly demonstrate the DevOps platform that we have built on Cisco Metapod.
+
+Slide1:
+
+DevOps is a philosophy to bring the skills and disciplines across the organization together, with one common objective of driving overall value creation, more ownership and risk reduction across the IT and product engineering landscape, including but not limited to  planning, development, deployment, support and innovation.
+
+Slide 2:
+
+DevOps is about maximizing the speed of delivery, of a product or service, from initial idea to production release, to customer feedback, to enhancements based on that feedback.
+
+Slide 3:
+
+Organisations should look at ways to move from, continuous integration and testing to continuous delivery, and to continuous deployment and augment it with continuous monitoring and feedback analytics, where upgrade is a normal event, which happens automatically whenever a well-defined and robust state is achieved.
+
+Demo:
+
+Although DevOps emphasizes people and culture over tools and processes, implementation utilizes technology.
+
+TCS’ DevOps framework leverages industry standard open-source tools and software which are seamlessly integrated to accelerate the roll-out of products and features to meet market demands and potentially accelerate revenue realization.
+
+By using our DevOps framework, deployed connectGlobe java based opensource application on Virtual Machine of Metapod. we can monitor the health of the service. We used an Open Source tool “Zabbix” for this which monitors the health of HW, Software & CPU utilization etc. This tool will be used to detect an anomaly. If anomaly is detected , a ticket is created in our Service management tool. We used another opensource tool “RedMine”. This has a powerful feature of collaboration. The moment a ticket is created, an automated notification gets generated to the Dev, QA & Ops teams. Upon discussions and agreement of the fix that needs to be made,  while the developer works on making changes to the code, the QA team working on modifying the automated test scripts and Ops team works on tweaking the parameters of Platform, if need be. Now, the developer checks out the code from the version control system “Git”. He makes the necessary changes and checks in. The moment the code is checked in Jenkins, the build management tool takes over and triggers automated unit testing. In addition it also triggers multiple other tools to check the code for memory leaks, code coverage, profiling and adherence to coding standards. Once the code passes this tests, “Gerrit”  is triggered which enables a manual expert review.  This also facilitates collaboration and feedback mechanism between reviewer and developer.Once this step is also passed, the code is committed to “GIT” auomatically by Gerrit. Jenkins keeps checking for code commits at defined intervals and creates a build. In addition, it also provisions a virtual test environment on Open stack cloud and configures it automatically using puppet.. After this, it triggers automated test suite which conducts Functional and system test cases. Once this is successful, we have developed a tool to automatically deploy the build on an openstack environment and run sanity checks.  Once the deployment is successful and the service is up and running, the status of the ticket is set automatically closed and everybody involved is notified.
+
+Slide 4:
+
+TCS' DevOps framework deployed on Cisco Metapod and enables end-to-end product life cycle management, with greater collaboration across teams from Business, Development, Quality Assurance, Release and Operation, as well as automation in the areas of continuous integration, testing and deployment and monitoring.
+
+Slide 5:
+
+The framework is flexible to be integrated with any third-party tools used in the product lifecycle. The framework is also deployable on physical hosts or on cloud as virtual machines or Docker containers.
+
+Cisco Metapod users can leverage this framework as a fully operational DevOps solution for Cisco for on-boarding and running enterprise apps. We are presenting more usecases for various development environments in the booth. You are welcome to provide feedback and help us enhance the framework for your needs.
+
+
+
